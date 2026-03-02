@@ -1,18 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #post-container {
+            max-width: 1160px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            row-gap: 40px;
+        }
+
+        .post-card {
+            border: 1px solid #5406f0;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px 1px rgb(5, 141, 232);
+            height: 100%;
+        }
+
+        .post-card p {
+            text-align: justify;
+        }
+        /* COMMENT PART 02 */
+        #comment-container{
+            max-width: 1160px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            row-gap: 40px;
+        }
+        .comment-card{
+             border: 1px solid #c2f128;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px 1px rgb(33, 236, 169);
+            height: 100%; 
+        }
+        .comment-card h4 {
+            text-align: justify;
+        }
+        .comment-card p {
+            text-align: justify;
+        }
+
+    </style>
 </head>
+
+
 <body>
     <button onclick="loadData()">Load Data</button>
     <button onclick="loadPost()">load post</button>
-<!--     <button onclick="commentPost()">coment post</button> -->
+    <button onclick="commentPost()">coment post</button>
+    <!-- posts part -->
+    <div id="post-container">
 
- <ul id="post-container"></ul>
+    </div>
+    <!-- comment part -->
+    <div id="comment-container">
+      
+    </div>
 
-    <script src="./jsion.js"></script>
-    <script src="./jsoncopy.js"></script>
+
+
+     <script src="./posts.js"></script> 
+    <script src="./comment.js"></script>
 </body>
+
 </html>
